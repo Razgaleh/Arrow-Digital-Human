@@ -16,7 +16,7 @@ According to [ACE documentation](https://docs.nvidia.com/ace/latest/workflows/to
     * Contains only lowercase letters (a-z), digits (0-9), and hyphens (-)
     * Begins and ends with an alphanumeric character 
     * Be at most 253 characters long
-    * Refer to troubleshooting section to set/change the hostname
+    * Refer to troubleshooting section 10.4 to set/change the hostname
 * **Hardware**: 
     * **GPU**: 
 
@@ -161,7 +161,7 @@ To start the baremetal deployment first you need to initialize all your environm
 
 Now, you can run the following the install command in the same directory: 
 
-    bash -v ./envbuild.sh install all --component all  --config-file ./<name-of-your-config-yml-file>.yml  
+    bash -v ./envbuild.sh install --component all  --config-file ./<name-of-your-config-yml-file>.yml  
 
 Let the script run. The script portion may take approximately 15-20 minutes. After that, a few hours later, the Kubernetes pods will start. You can check the status of the kubernetes pods by running: 
 
@@ -215,7 +215,7 @@ Alternatively, run this command if still facing errors.
 
 Verify that you have the correct license and sufficient credits through the NVIDIA portal.
 
-### 10.4 Kubernetes doesn't like my hostname
+### 10.4 Resolve Kubernetes hostname issue
 
 Run one of these commands to change your App server's hostname
 
