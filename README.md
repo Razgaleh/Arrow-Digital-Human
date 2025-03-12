@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-Arrow's Digital Human Baremetal Deployment 
-=======
 # Arrow Digital Human Baremetal Deployment 
 
 This is a step-by-step instruction for deploying NVIDIA ACE Digital Human project on baremetal. Our team at Arrow Electronics ECS was able to deploy this project on a 2xA6000 workstation. The purpose of this documentation is to provide solutions and troubleshooting tips for common errors experienced during deployment. 
@@ -164,11 +161,11 @@ To start the baremetal deployment first you need to initialize all your environm
 
 Now, you can run the following the install command in the same directory: 
 
-    bash -v ./envbuild.sh install all  --component all  --config-file ./<name-of-your-config-yml-file>.yml  
+    bash -v ./envbuild.sh install all --component all  --config-file ./<name-of-your-config-yml-file>.yml  
 
 Let the script run. The script portion may take approximately 15-20 minutes. After that, a few hours later, the Kubernetes pods will start. You can check the status of the kubernetes pods by running: 
 
-    Kubectl get po -n app 
+    kubectl get po -n app 
 
 ***Note:*** If ubuntu firewall is enabled, ensure that port 80 is allowed.
 
@@ -217,7 +214,7 @@ Alternatively, run this command if still facing errors.
 ### 10.3 The Digital Human avatar starts, greets you and says his name is Taylor but says he is having "technical difficulties"
 
 Verify that you have the correct license and sufficient credits through the NVIDIA portal.
->>>>>>> bfaac66 (Added README.md)
+
 ### 10.4 Kubernetes doesn't like my hostname
 
 Run one of these commands to change your App server's hostname
